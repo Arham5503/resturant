@@ -1,0 +1,735 @@
+/***************   Libraries     ****************/
+@font-face {
+    font-family: Gabarito;
+    src: url("/Gabarito-VariableFont_wght.ttf");
+}
+
+.pacifico-regular {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+html {
+    font-family: Gabarito;
+    overflow-x: hidden;
+}
+
+:root {
+    --primary: rgb(255, 123, 0);
+    --secondry: rgba(252, 154, 62, 0.877);
+    --fot: rgba(16, 23, 45, 255);
+    --head1: 2.3rem;
+    --head3: 1.5rem;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/***************   Header     ****************/
+header {
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    padding: 10px;
+    background-color: var(--fot);
+    color: white;
+    display: flex;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.logo h1 {
+    font-size: var(--head1);
+    color: var(--primary);
+}
+
+.logo img {
+    width: 80px;
+    height: 50px;
+}
+
+.hidee {
+    flex-grow: 1;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hidee li {
+    cursor: pointer;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+    background-color: var(--primary);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.sil {
+    cursor: pointer;
+    display: none;
+}
+
+.slide {
+    width: 28px;
+    height: 3px;
+    margin: 3px;
+    background-color: var(--primary);
+}
+
+.ase {
+    display: none;
+    padding-top: 20px;
+}
+
+.ase li {
+    padding: 20px 0;
+}
+
+.ase a {
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.ase a:hover {
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+.zone {
+    background-color: black;
+    color: white;
+    text-align: center;
+
+}
+
+
+/***********       First Section     ***************/
+.first {
+    display: flex;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), transparent), url("/pexels-gonzalo-guzman-3997609.jpg");
+    height: 95vh;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.text {
+    flex-grow: 1;
+    color: white;
+    position: relative;
+    top: 15%;
+    left: 7%;
+}
+
+.text h1 {
+    font-size: 2.4rem;
+    font-family: sans-serif;
+    line-height: 1.25;
+}
+
+.text p {
+    font-size: 1.1rem;
+}
+
+.text button {
+    width: 150px;
+    height: 50px;
+    padding: 0.5rem;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+    margin: 20px 0px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.ani {
+    flex-grow: 1;
+    position: relative;
+    top: 20%;
+    left: 10%;
+}
+
+.ani img {
+    animation: rot 7s linear infinite;
+    width: 550px;
+    height: auto;
+}
+
+@keyframes rot {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/***********       Second Section     **************/
+.second {
+    display: flex;
+    flex-wrap: wrap;
+    height: 80vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.second .icon {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.second .ico {
+    height: 75px;
+}
+
+.ico img {
+    width: 60px;
+}
+
+.icon:hover {
+    background-color: var(--secondry);
+
+    transition: 1s;
+}
+
+.icon:hover .ico img {
+    filter: invert(100%) grayscale(100%) brightness(200%);
+}
+
+.icon {
+    flex-wrap: 20rem;
+    height: 200px;
+    width: 200px;
+    box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+/***********       Third Section     ***************/
+.third {
+    display: flex;
+    height: auto;
+    padding: 0 15px;
+    margin: 50px 0;
+    flex-wrap: wrap;
+}
+
+
+.cont {
+    flex: 1 1 20rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.box3 {
+    display: flex;
+    justify-content: end;
+    align-self: left;
+}
+
+.box1 {
+    display: flex;
+    justify-content: end;
+    align-self: right;
+}
+
+.img2,
+.img3 {
+    width: 180px;
+    height: 180px;
+}
+
+.img2 {
+    margin-top: 100px;
+}
+
+.img1,
+.img4 {
+    width: 250px;
+    height: 280px;
+}
+
+.p {
+    flex: 1 0 20rem;
+}
+
+.dd {
+    position: relative;
+    top: 20%;
+    padding: 30px;
+}
+
+.dd h3 {
+    font-size: var(--head3);
+    color: var(--primary);
+}
+
+.dd img {
+    width: 40px;
+}
+
+.dd h1 {
+    font-size: var(--head1);
+}
+
+.dd button {
+    width: 150px;
+    height: 50px;
+    padding: 0.5rem;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+    margin: 20px 0px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+/***********       Fourth Section     ***************/
+.fourth img {
+    width: 90px;
+    height: 90px;
+}
+
+.fourth {
+    display: block;
+}
+
+.heading {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.ppp {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.parentt {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+
+.chil {
+    flex: 1 0 20rem;
+    width: 100%;
+    display: flex;
+    padding: 5px;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.ssp {
+    width: 100%;
+    padding: 10px;
+}
+
+.fourth h3,
+h4 {
+    color: var(--primary);
+}
+
+.fourth h3 {
+    font-size: var(--head3);
+}
+
+.fourth h1 {
+    font-size: var(--head1);
+}
+
+.sp {
+    display: flex;
+    justify-content: space-between;
+}
+
+.parentt:nth-child(even) {
+    margin: 20px 0;
+}
+
+/***********       Fifth Section     ***************/
+.fifth {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.fifth .imm,
+.book {
+    flex: 1 0 20rem;
+    width: 100%;
+}
+
+.imm {
+    width: 100%;
+    overflow: hidden;
+}
+
+#inn {
+    width: 100%;
+    display: block;
+    height: 100%;
+}
+
+.book {
+    color: white;
+    background-color: var(--fot);
+    padding: 30px;
+    width: 100%;
+}
+
+.book h3 {
+    color: var(--primary);
+    font-size: var(--head3);
+}
+
+.book h1 {
+    font-size: var(--head1);
+}
+
+.smtp-form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.in {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.in input {
+    flex: 1 0 10rem;
+    width: 100%;
+    height: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.in:nth-child(even) {
+    margin-top: 20px;
+}
+
+.bto {
+    width: 140px;
+    height: 45px;
+    padding: 0.5rem;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+    margin: 20px 0px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+/***********       Sixth Section     ***************/
+.heading h3 {
+    color: var(--primary);
+    font-size: var(--head3);
+}
+
+.heading h1 {
+    font-size: var(--head1);
+}
+
+.cheef {
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 60vh;
+}
+
+.ch {
+    flex-basis: 12rem;
+    width: 180px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    margin: 30px 0px;
+}
+
+.ch:hover {
+    height: 240px;
+    transition: 0.8s;
+}
+
+.pro {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.pro img {
+    width: 100%;
+    display: block;
+}
+
+.busy {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.busy img {
+    display: none;
+    width: 30px;
+}
+
+.ch:hover .busy img {
+    display: block;
+}
+
+/***********Footer Desining****************/
+footer {
+    background-color: var(--fot);
+    color: white;
+}
+
+.foot {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.ft {
+    flex: 1 0 12rem;
+    margin-top: 40px;
+    padding-bottom: 30px;
+}
+
+.foot img {
+    width: 30px;
+}
+
+.ft-ul {
+    list-style: none;
+
+}
+
+.ft li {
+    margin: 10px 0;
+}
+
+h2 {
+    color: rgb(255, 123, 0);
+}
+
+.btb {
+    max-width: 140px;
+    height: 40px;
+    padding: 0.5rem;
+    background-color: rgb(255, 123, 0);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+    margin: 20px 0px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.ft-mail input {
+    height: 37px;
+    width: 125px;
+    border-radius: 5px;
+    border: none;
+    outline-color: rgb(255, 123, 0);
+    padding: 3px 10px;
+}
+
+.ft-ul img {
+    height: 17px;
+    filter: invert(100%);
+}
+
+.ft-ul a {
+    color: white;
+    text-decoration: none;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.claim {
+    display: flex;
+    margin-top: 20px;
+    border-top: 2px solid #0a0e1c;
+    padding: 20px 0 10px 0;
+}
+
+.claim img {
+    width: 30px;
+}
+
+.claim-text {
+    flex-grow: 1;
+    font-size: 1.2rem;
+    margin-left: 10px;
+}
+
+.gitt {
+    flex-grow: 1;
+}
+
+.gitt ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+li{
+    cursor: pointer;
+}
+.social img{
+    cursor: pointer;
+}
+/***************   All Media Queries     ****************/
+@media screen and (max-width:768px) {
+
+    .ani,
+    .hidee {
+        display: none;
+    }
+
+    .sil {
+        display: block;
+    }
+
+    .text {
+        text-align: center;
+        left: 0;
+        padding: 30px;
+        line-height: 1;
+    }
+
+    .icon {
+        margin-top: 30px;
+    }
+
+    .third {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .text {
+        left: 0;
+    }
+
+    .cont {
+        margin-top: 70px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .box img {
+        width: 100%;
+        display: block;
+        height: auto;
+    }
+
+    .box {
+        display: block;
+    }
+
+    .img2 {
+        margin: 0;
+    }
+}
+
+@media (min-width: 769px) {
+    .zone {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .cheef {
+        height: 130vh;
+    }
+}
