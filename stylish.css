@@ -688,7 +688,7 @@ li{
     .icon {
         margin-top: 30px;
     }
-    .second {
+    .second , .cheef {
         align-items: center;
         height: auto;
     }
