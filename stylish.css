@@ -688,7 +688,10 @@ li{
     .icon {
         margin-top: 30px;
     }
-
+    .second {
+        align-items: center;
+        height: auto;
+    }
     .third {
         display: block;
         width: 100%;
