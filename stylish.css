@@ -694,7 +694,7 @@ li{
     }
     .third {
         display: block;
-        width: 100%;
+        width: auto;
         height: auto;
     }
 
@@ -707,7 +707,7 @@ li{
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
+        width: auto;
     }
 
     .box img {
