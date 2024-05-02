@@ -668,7 +668,9 @@ li{
 }
 /***************   All Media Queries     ****************/
 @media screen and (max-width:768px) {
-
+    main{
+        width: auto;
+    }
     .ani,
     .hidee {
         display: none;
